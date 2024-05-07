@@ -1,30 +1,17 @@
 package org.example.model;
 
-public class Chocolate extends ProductForSale {
+public class Chocolate extends ProductForSale{
 
-    private String color;
-    private Boolean hasSugar;
-
+    private String chocolateInstance;
     public Chocolate(String type, double price, String description) {
         super(type, price, description);
     }
-
-    public Chocolate(String type, double price, String description, String color, boolean hasSugar) {
+    public Chocolate(String type, double price, String description, String chocolateInstance) {
         super(type, price, description);
-        this.color = color;
-        this.hasSugar = hasSugar;
+        this.chocolateInstance = chocolateInstance;
     }
-
     @Override
     public void showDetails() {
-        System.out.println(super.toString() + this);
-    }
-
-    @Override
-    public String toString() {
-        return "Chocolate{" +
-                "color='" + color + '\'' +
-                ", hasSugar=" + hasSugar +
-                '}';
+        System.out.println(getDescription() + " " + getType() + " " + getPrice() + " " + chocolateInstance);
     }
 }

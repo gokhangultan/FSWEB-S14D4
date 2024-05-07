@@ -1,29 +1,17 @@
 package org.example.model;
 
-public class Bread extends ProductForSale {
-    private String flourType;
-    private String color;
-
+public class Bread extends ProductForSale{
+    private String breadInstance;
     public Bread(String type, double price, String description) {
         super(type, price, description);
     }
-
-    public Bread(String type, double price, String description, String flourType, String color) {
+    public Bread(String type, double price, String description, String breadInstance) {
         super(type, price, description);
-        this.flourType = flourType;
-        this.color = color;
+        this.breadInstance = breadInstance;
     }
-
     @Override
     public void showDetails() {
-        System.out.println(super.toString() + this);
-    }
+        System.out.println(getDescription() + " " + getType() + " " + getPrice() + " " + breadInstance);
 
-    @Override
-    public String toString() {
-        return "Bread{" +
-                "flourType='" + flourType + '\'' +
-                ", color='" + color + '\'' +
-                '}';
     }
 }

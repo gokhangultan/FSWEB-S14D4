@@ -11,16 +11,6 @@ public abstract class ProductForSale {
         this.description = description;
     }
 
-    public void printHello() {
-        System.out.println("hello");
-    }
-
-    public abstract void showDetails();
-
-    public double getSalesPrice(int quantity) {
-        return quantity * price;
-    }
-
     public String getType() {
         return type;
     }
@@ -33,12 +23,8 @@ public abstract class ProductForSale {
         return description;
     }
 
-    @Override
-    public String toString() {
-        return "ProductForSale{" +
-                "type='" + type + '\'' +
-                ", price=" + price +
-                ", description='" + description + '\'' +
-                '}';
+    public double getSalesPrice(int quantity){
+        return quantity * price;
     }
+    public abstract void showDetails();
 }

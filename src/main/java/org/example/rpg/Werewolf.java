@@ -21,4 +21,9 @@ public class Werewolf extends Monster implements Bleedable {
     public double bleed(int level) {
         return level * getDamage() * Constant.BLEED_PERCENTAGE;
     }
+
+    @Override
+    public double poison() {
+        return 0;
+    }
 }
